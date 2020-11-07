@@ -9,7 +9,8 @@ from sklearn.preprocessing import OneHotEncoder
 import pandas as pd
 from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
-#from azureml.core.dataset import Dataset
+
+
 #from azureml.core import Dataset, Datastore
 #from azureml.data.datapath import DataPath
 
@@ -19,11 +20,7 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
 web_path="https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
-ds = Dataset.Tabular.from_delimited_files(path=web_path)
-
-
-
-ds = ### YOUR CODE HERE ###
+ds = Dataset.Tabular.from_delimited_files(path=web_path,  separator='\t')
 
 x, y = clean_data(ds)
 
