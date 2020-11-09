@@ -28,6 +28,8 @@ x, y = clean_data(ds)
 
 ### YOUR CODE HERE ###a
 
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=66)
+
 run = Run.get_context()
 
 def clean_data(data):
