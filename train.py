@@ -11,8 +11,8 @@ from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
 
 
-#from azureml.core import Dataset, Datastore
-#from azureml.data.datapath import DataPath
+# from azureml.core import Dataset, Datastore
+# from azureml.data.datapath import DataPath
 
 
 # TODO: Create TabularDataset using TabularDatasetFactory
@@ -26,7 +26,7 @@ x, y = clean_data(ds)
 
 # TODO: Split data into train and test sets.
 
-### YOUR CODE HERE ###a
+# ## YOUR CODE HERE ###a
 
 X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=66)
 
@@ -57,7 +57,7 @@ def clean_data(data):
     x_df["poutcome"] = x_df.poutcome.apply(lambda s: 1 if s == "success" else 0)
 
     y_df = x_df.pop("y").apply(lambda s: 1 if s == "yes" else 0)
-    
+
 
 def main():
     # Add arguments to script
