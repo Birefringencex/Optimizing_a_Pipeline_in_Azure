@@ -11,7 +11,7 @@ This dataset contains data about the direct marketing campaigns (phone calls) of
 
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
-The best performing model was 
+During the first part of the project the Data
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
