@@ -6,15 +6,18 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
-This dataset contains data about the direct marketing campaigns (phone calls) of a Portuguese banking institution. The classification goal is to predict if the client will subscribe a term deposit (variable y).
 
+This dataset contains data about the direct marketing campaigns (phone calls) of a Portuguese banking institution. The classification goal is to predict if the client will subscribe to a term deposit (variable y).
+During the first part of the project, the Dataset was treated with an assigned Scikit learn model of Logistic Regression, which is a supervised learning linear model for classification. The goal was to test and choose the Hyperparameter variables for later use in the Hyperdrive. The metric to seek for the best run was  Accuracy, which results in 0.9101 for this experiment.
+The second part dataset was treated with the AutoML, also doing a task of classification and looking a primary metric Accuracy. During this trial, the best performing model was soft VotingEnsemble  who had an Accuracy of 0.91683 
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
-During the first part of the project the Data
 
 ## Scikit-learn Pipeline
-**Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+
+Within a Python file (train.py), the Bank marketing study Dataset was first retrieved from a web path and the transform in a TabularDataset using TabulaDatasetFactory, then the Data was treated with a given function named “clean_data”, its main purpose was to fix some irregularities within the data, like changing categorical values to numbers, get rid of missing values or fixing some columns.
+With a clean Dataset, the Data was split into train and test set into a ratio of 70:30, this was done with the train_test split. Then the main function was used to declare the argument and set the model, in this first part the chosen model was LogisticRegression, and the model score was Accuracy. 
+The next step was performed in a Jupyter Notebook, where at first basic connections were established and a Compute Cluster was created. Also, a Sklearn estimator used with the Python file (train.py)  was applied here to train the experiment and then to configure the  Hyperdrive. This Hyperdrive configuration was created using the estimator, hyperparameter sampler, and a chosen policy.  The tuning of the parameter was performed by changing the values of  C (Inverse of regularization strength. Smaller values cause stronger regularization) and max_iter(Maximum number of iteration to converge).
+Finally, the Hyperdrive run was submitted and the details were showed with the widget. Not forgetting that the best run were fetched and then also saved with the corresponding resulting Accuracy.
 
 **What are the benefits of the parameter sampler you chose?**
 
