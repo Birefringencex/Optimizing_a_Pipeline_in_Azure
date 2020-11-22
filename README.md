@@ -34,7 +34,7 @@ From the defined hyperparameter search space, the number of iterations possible 
 
 The AutoML enables to try multiples algorithms and preprocessing transformation with the data, this helps to find the best performing model without the effort of trying the whole process manual process to chose the best parameters to obtain the best model.
 AutoML in Azure Machine Learning trains a large number of models for different types of machine learning tasks like Classification, Regression, or Time Series Forecasting. By default, AutoML will randomly select from a full range of algorithms for the specified task. For this example, the dataset was retrieved from the same website as before, then was transformed to in a TabularDataset using TabulaDatasetFactory, then cleaned with the clean_data function, and finally split into train and test sets. To run AutoML a set of parameters were chosen in an AutoML Configuration, for this case a timeout time of 30 minutes was used, the task was defined as classification, the primary metric was again accuracy as it was in scklearn and the label column name y, which is the goal to predict and also the n_cross_validation which are the n_fold cross-validation to able to use in each model.
-Here is screen shot  of a list of the algorithm used in the AutoML, the algorithm name of the best model was Voting Ensemble with an accuracy of 0.91683
+Here is screenshot  of a list of the algorithm used in the AutoML, the algorithm name of the best model was Voting Ensemble with an accuracy of 0.91683
 
 ![alt text](https://github.com/Gabilopez1/Optimizing_a_Pipeline_in_Azure/blob/master/models.PNG)
 
@@ -43,7 +43,7 @@ Here is screen shot  of a list of the algorithm used in the AutoML, the algorith
 
 architecture? If there was a difference, why do you think there was one?**
 In general terms, there is only a slight difference in accuracy between the best run of  Scikit-learn Pipeline (0.9101) and the best model obtained with AutoML (0.91683). Neither the less the result with AutoML is better than with the Scikit-learn. AutoML tried different algorithms and can obtain better results because it has a large probability to find the best model because there it trains more models. The slight diference in accuracy could probably be caused because the dataset is not large enough to show the advantage of AutoML.
-Here is a screen shot of the Scikit Pipeline:
+Here is a screenshot of the Scikit Pipeline:
 
 ![alt text](https://github.com/Gabilopez1/Optimizing_a_Pipeline_in_Azure/blob/master/sklearaccuracy.PNG)
 
