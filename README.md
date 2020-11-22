@@ -45,6 +45,12 @@ architecture? If there was a difference, why do you think there was one?**
 In general terms, there is only a slight difference in accuracy between the best run of  Scikit-learn Pipeline (0.9101) and the best model obtained with AutoML (0.91683). Neither the less the result with AutoML is better than with the Scikit-learn. AutoML tried different algorithms and can obtain better results because it has a large probability to find the best model because there it trains more models. The slight diference in accuracy could probably be caused because the dataset is not large enough to show the advantage of AutoML.
 Here is a screen shot of the Scikit Pipeline:
 
+![alt text](https://github.com/Gabilopez1/Optimizing_a_Pipeline_in_Azure/blob/master/sklearaccuracy.PNG)
+
+For the AutoML the best model obtained was Voting Ensemble:
+
+![alt text](https://github.com/Gabilopez1/Optimizing_a_Pipeline_in_Azure/blob/master/automlbestmodel.PNG)
+
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
 
