@@ -11,7 +11,7 @@ This dataset contains data about the direct marketing campaigns (phone calls) of
 During the first part of the project, the Dataset was treated with an assigned Scikit learn model of Logistic Regression, which is a supervised learning linear model for classification. The goal was to test and choose the Hyperparameter variables for later use in the Hyperdrive. The metric to seek for the best run was  Accuracy, which results in 0.9101 for this experiment.
 The second part dataset was treated with the AutoML, also doing a task of classification and looking a primary metric Accuracy. During this trial, the best performing model was soft VotingEnsemble  who had an Accuracy of 0.91683 
 
-![alt text](https://github.com/Gabilopez1/Optimizing_a_Pipeline_in_Azure/blob/master/models.PNG)
+
 
 
 ## Scikit-learn Pipeline
@@ -36,7 +36,7 @@ The AutoML enables to try multiples algorithms and preprocessing transformation 
 AutoML in Azure Machine Learning trains a large number of models for different types of machine learning tasks like Classification, Regression, or Time Series Forecasting. By default, AutoML will randomly select from a full range of algorithms for the specified task. For this example, the dataset was retrieved from the same website as before, then was transformed to in a TabularDataset using TabulaDatasetFactory, then cleaned with the clean_data function, and finally split into train and test sets. To run AutoML a set of parameters were chosen in an AutoML Configuration, for this case a timeout time of 30 minutes was used, the task was defined as classification, the primary metric was again accuracy as it was in scklearn and the label column name y, which is the goal to predict and also the n_cross_validation which are the n_fold cross-validation to able to use in each model.
 Here is screen shot  of a list of the algorithm used in the AutoML, the algorithm name of the best model was Voting Ensemble with an accuracy of 0.91683
 
-
+![alt text](https://github.com/Gabilopez1/Optimizing_a_Pipeline_in_Azure/blob/master/models.PNG)
 
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
