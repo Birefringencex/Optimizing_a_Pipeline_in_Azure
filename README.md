@@ -51,9 +51,24 @@ For the AutoML the best model obtained was Voting Ensemble:
 
 ![alt text](https://github.com/Gabilopez1/Optimizing_a_Pipeline_in_Azure/blob/master/automlbestmodel.PNG)
 
+![alt text](https://github.com/Gabilopez1/Optimizing_a_Pipeline_in_Azure/blob/master/AutoML.PNG)
+
+
+Here also the explanation of the best model with AutoML in the Visual Studio and Top K Features.
+
+![alt text](https://github.com/Gabilopez1/Optimizing_a_Pipeline_in_Azure/blob/master/globalexplanation.PNG)
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
+
+I would like to find out more about why the difference in accuracy between the Scikit Pipeline and AutoML was not larger. Could it be that to get a significant difference the dataset should be larger and more complex? Also, I read that AutoML is able the apply preprocessing transformation such as fix null on the training dataset, categorical encoding to convert features to numeric, and dropping high-cardinality features, this means that is possible that previous use on the fuction data_clean is not necessary for AutoML.
+
 
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
 **Image of cluster marked for deletion**
+
+To save money on the  Azure compute costs, I   deleted the compute cluster. Here is the image of the moment with the action was taking placed.
+
+![alt text](https://github.com/Gabilopez1/Optimizing_a_Pipeline_in_Azure/blob/master/clusterdeleting.PNG)
+
+![alt text](https://github.com/Gabilopez1/Optimizing_a_Pipeline_in_Azure/blob/master/clusterdeleting2.PNG)
