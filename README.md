@@ -11,6 +11,8 @@ This dataset contains data about the direct marketing campaigns (phone calls) of
 During the first part of the project, the Dataset was treated with an assigned Scikit learn model of Logistic Regression, which is a supervised learning linear model for classification. The goal was to test and choose the Hyperparameter variables for later use in the Hyperdrive. The metric to seek for the best run was  Accuracy, which results in 0.9101 for this experiment.
 The second part dataset was treated with the AutoML, also doing a task of classification and looking a primary metric Accuracy. During this trial, the best performing model was soft VotingEnsemble  who had an Accuracy of 0.91683 
 
+![alt text](https://github.com/Gabilopez1/Optimizing_a_Pipeline_in_Azure/blob/master/models.PNG)
+
 
 ## Scikit-learn Pipeline
 
